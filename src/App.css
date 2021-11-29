@@ -39,8 +39,6 @@
   align-items: center;
   justify-content: space-between;
 }
-.App .calculator .calculate h2 {
-}
 .App .calculator .calculate button {
   margin-top: 10px;
   border: none;
