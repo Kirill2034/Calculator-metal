@@ -68,7 +68,7 @@ const App = () => {
   const [fineness, setFineness] = useState(null);
   const [payment, setPayment] = useState(null);
   const [gramms, setGramms] = useState("");
-  const [sum, setSum] = useState(localStorage.getItem('sum'));
+  const [sum, setSum] = useState("");
 
   
 
@@ -99,7 +99,7 @@ const App = () => {
     const totalSum = grammPrice * parseInt(gramms);
     setSum(totalSum);
 
-    localStorage.setItem('sum', totalSum);
+    localStorage.setItem('Сумма', totalSum);
   };
 
   return (

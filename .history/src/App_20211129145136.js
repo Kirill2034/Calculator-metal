@@ -68,7 +68,7 @@ const App = () => {
   const [fineness, setFineness] = useState(null);
   const [payment, setPayment] = useState(null);
   const [gramms, setGramms] = useState("");
-  const [sum, setSum] = useState(localStorage.getItem('sum'));
+  const [sum, setSum] = useState("");
 
   
 
@@ -99,7 +99,7 @@ const App = () => {
     const totalSum = grammPrice * parseInt(gramms);
     setSum(totalSum);
 
-    localStorage.setItem('sum', totalSum);
+    
   };
 
   return (
@@ -152,9 +152,8 @@ const App = () => {
             />
           </div>
           <div className="calculate">
-            {sum && (<h2>Итого:{sum}</h2>)}
-            
-            <button disabled={!fineness || !payment || !gramms} onClick={onCount}>
+            <h2 className="calculateH2">Итого:{sum}</h2>
+            <button disabled={!fineness || !payment || !gramms} className="calculateButton" onClick={onCount}>
               Рассчитать
             </button>
           </div>

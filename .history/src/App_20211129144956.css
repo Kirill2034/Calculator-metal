@@ -35,13 +35,13 @@
   width: 70%;
 }
 .App .calculator .calculate {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 .App .calculator .calculate h2 {}
 .App .calculator .calculate button {
-  margin-top: 10px;
   border: none;
   box-shadow: none;
   outline: none;
@@ -54,6 +54,10 @@
   color: #f8f5ee;
   padding: 8px 64px;
   cursor: pointer;
+  position: absolute;
+  margin-top: 24px;
+  right: 0;
+  top: 50%;
 }
 .App .calculator .select-prop-metal input {
   -webkit-box-align: center;
