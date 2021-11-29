@@ -94,6 +94,7 @@ const App = () => {
     const totalSum = grammPrice * parseInt(gramms);
     setSum(totalSum);
 
+    localStorage.setItem("metal", JSON.stringify(metal));
     localStorage.setItem("sum", totalSum);
     localStorage.setItem("fineness", JSON.stringify(fineness));
     localStorage.setItem("payment", JSON.stringify(payment));
@@ -101,6 +102,13 @@ const App = () => {
   };
 
   useEffect(() => {
+    const metalString = localStorage.getItem("metal");
+
+    if (metalString != null) {
+      const metal = JSON.parse(metalString);
+      setMetal(metal);
+    }
+
     const finenessString = localStorage.getItem("fineness");
 
     if (finenessString != null) {
@@ -115,7 +123,7 @@ const App = () => {
       setPayment(payment);
     }
 
-    if (sum != null) {
+    if (sum !== null) {
       setSum(sum);
     }
   }, []);
