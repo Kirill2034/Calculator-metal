@@ -114,6 +114,11 @@ const App = () => {
       const payment = JSON.parse(paymentString);
       setPayment(payment);
     }
+
+    if (sum != null) {
+      
+      setSum(sum);
+    }
   }, []);
 
   return (
