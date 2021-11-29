@@ -3,7 +3,6 @@ import "./App.css";
 import { Chip } from "./components/Chip";
 import Select from "react-select";
 
-
 const metals = [
   {
     id: 1,
@@ -68,9 +67,7 @@ const App = () => {
   const [fineness, setFineness] = useState(null);
   const [payment, setPayment] = useState(null);
   const [gramms, setGramms] = useState("");
-  const [sum, setSum] = useState(localStorage.getItem('sum'));
-
-  
+  const [sum, setSum] = useState(localStorage.getItem("sum"));
 
   const onMetalChange = (newMetalValue) => {
     setMetal(newMetalValue);
@@ -78,8 +75,6 @@ const App = () => {
 
     onFinenessChange(null);
     setSum("");
-
-    
   };
 
   const onFinenessChange = (newFinenessValue) => {
@@ -99,7 +94,7 @@ const App = () => {
     const totalSum = grammPrice * parseInt(gramms);
     setSum(totalSum);
 
-    localStorage.setItem('sum', totalSum);
+    localStorage.setItem("sum", totalSum);
   };
 
   return (
@@ -109,7 +104,7 @@ const App = () => {
       </div>
       <div className="calculator">
         <div className="metal-image">
-          <img src={metalImage} alt=""/>
+          <img src={metalImage} alt="" />
         </div>
         <div className="content">
           <div className="check-metal">
@@ -152,9 +147,12 @@ const App = () => {
             />
           </div>
           <div className="calculate">
-            {sum && (<h2>Итого:{sum}</h2>)}
-            
-            <button disabled={!fineness || !payment || !gramms} onClick={onCount}>
+            {sum && <h2>Итого:{sum}</h2>}
+
+            <button
+              disabled={!fineness || !payment || !gramms}
+              onClick={onCount}
+            >
               Рассчитать
             </button>
           </div>

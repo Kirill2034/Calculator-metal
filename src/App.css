@@ -39,7 +39,8 @@
   align-items: center;
   justify-content: space-between;
 }
-.App .calculator .calculate h2 {}
+.App .calculator .calculate h2 {
+}
 .App .calculator .calculate button {
   margin-top: 10px;
   border: none;
@@ -84,4 +85,5 @@
   margin-bottom: 16px;
 }
 
-.App .calculate h2 {}
+.App .calculate h2 {
+}
