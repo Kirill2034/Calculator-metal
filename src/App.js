@@ -104,21 +104,21 @@ const App = () => {
   useEffect(() => {
     const metalString = localStorage.getItem("metal");
 
-    if (metalString != null) {
+    if (metalString !== null) {
       const metal = JSON.parse(metalString);
       setMetal(metal);
     }
 
     const finenessString = localStorage.getItem("fineness");
 
-    if (finenessString != null) {
+    if (finenessString !== null) {
       const fineness = JSON.parse(finenessString);
       setFineness(fineness);
     }
 
     const paymentString = localStorage.getItem("payment");
 
-    if (paymentString != null) {
+    if (paymentString !== null) {
       const payment = JSON.parse(paymentString);
       setPayment(payment);
     }
