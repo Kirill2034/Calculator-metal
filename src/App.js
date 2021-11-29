@@ -98,15 +98,15 @@ const App = () => {
   };
 
   return (
-    <div className="App">
-      <div className="title">
+    <div className="calculator">
+      <div className="calculator__title">
         <h2>Калькулятор</h2>
       </div>
-      <div className="calculator">
-        <div className="metal-image">
+      <div className="calculator__content">
+        <div className="calculator__metal-image">
           <img src={metalImage} alt="" />
         </div>
-        <div className="content">
+        <div className="calculator__metals">
           <div className="check-metal">
             {metals.map((item) => (
               <Chip
@@ -117,7 +117,7 @@ const App = () => {
               />
             ))}
           </div>
-          <div className="select-prop-metal">
+          <div className="calculator__metals__select-prop-metal">
             <h2>Укажите следующие параметры:</h2>
             <Select
               className="select"
@@ -146,7 +146,7 @@ const App = () => {
               required
             />
           </div>
-          <div className="calculate">
+          <div className="calculator__calculate">
             {sum && <h2>Итого:{sum}</h2>}
 
             <button
