@@ -17,7 +17,6 @@
   margin-top: 72px;
   margin-bottom: 40px;
 }
-
 .calculator__content {
   display: flex;
 }
@@ -54,7 +53,7 @@
   padding: 8px 64px;
   cursor: pointer;
 }
-.calculator__metals__select-prop-metal input {
+.calculator__parameters input {
   -webkit-box-align: center;
   align-items: center;
   background-color: hsl(0, 0%, 100%);
@@ -79,6 +78,6 @@
   line-height: 24px;
   color: #101010;
 }
-.calculator__metals__select-prop-metal .select {
+.calculator__parameters .select {
   margin-bottom: 16px;
 }

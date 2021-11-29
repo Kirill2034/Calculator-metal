@@ -74,7 +74,7 @@ const App = () => {
     setMetalImage(newMetalValue.img);
 
     onFinenessChange(null);
-    setSum("");
+    setSum(null);
   };
 
   const onFinenessChange = (newFinenessValue) => {
@@ -117,7 +117,7 @@ const App = () => {
               />
             ))}
           </div>
-          <div className="calculator__metals__select-prop-metal">
+          <div className="calculator__parameters ">
             <h2>Укажите следующие параметры:</h2>
             <Select
               className="select"

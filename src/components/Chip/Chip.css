@@ -1,4 +1,4 @@
-.Chip {
+.chip {
   border: 1px solid transparent;
   box-shadow: none;
   outline: none;
@@ -13,11 +13,11 @@
   margin-right: 16px;
   cursor: pointer;
 }
-.Chip:hover {
+.chip:hover {
   border: 1px solid #b48565;
   cursor: pointer;
 }
-.Chip.selected {
+.chip.selected {
   color: #f8f5ee;
   background: #b48565;
 }
