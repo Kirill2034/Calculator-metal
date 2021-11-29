@@ -116,7 +116,6 @@ const App = () => {
     }
 
     if (sum != null) {
-      
       setSum(sum);
     }
   }, []);
