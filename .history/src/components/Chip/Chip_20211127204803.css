@@ -1,3 +1,0 @@
-.Chip {border: 1px solid transparent; box-shadow: none; outline: none; background: #F8F5EE; border-radius: 100px; padding: 4px 12px; color: #101010; font-weight: normal; font-size: 16px; line-height: 24px; letter-spacing: 0.04em; margin-right: 16px; cursor: pointer;}
-.Chip:hover {border: 1px solid #B48565; cursor: pointer;}
-.Chip.selected {color: #F8F5EE; background: #B48565;}

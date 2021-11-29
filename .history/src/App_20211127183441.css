@@ -1,5 +1,0 @@
-.App {width: 1024px; height: 537px; border: 1px solid #B48565; margin: 0 auto; font-family: 'Inter', sans-serif; padding: 0 40px;}
-.App .title {border-bottom: 1px solid #B48565; text-transform: uppercase; font-weight: 900; font-size: 16px; line-height: 24px; color: #101010; margin-top: 72px;}
-
-.App .calculator {display: flex;}
-.App .calculator .metal-image {width: 304px; height: 328px; border: 1px solid #B48565}
