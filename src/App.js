@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import { Chip } from "./components/Chip";
 import Select from "react-select";
@@ -64,9 +64,9 @@ const payments = [
 const App = () => {
   const [metal, setMetal] = useState(metals[0]);
   const [metalImage, setMetalImage] = useState(metals[0].img);
-  const [fineness, setFineness] = useState(null);
-  const [payment, setPayment] = useState(null);
-  const [gramms, setGramms] = useState("");
+  const [fineness, setFineness] = useState(localStorage.getItem("fineness"));
+  const [payment, setPayment] = useState(localStorage.getItem("payment"));
+  const [gramms, setGramms] = useState(localStorage.getItem("gramms"));
   const [sum, setSum] = useState(localStorage.getItem("sum"));
 
   const onMetalChange = (newMetalValue) => {
@@ -95,7 +95,26 @@ const App = () => {
     setSum(totalSum);
 
     localStorage.setItem("sum", totalSum);
+    localStorage.setItem("fineness", JSON.stringify(fineness));
+    localStorage.setItem("payment", JSON.stringify(payment));
+    localStorage.setItem("gramms", gramms);
   };
+
+  useEffect(() => {
+    const finenessString = localStorage.getItem("fineness");
+
+    if (finenessString != null) {
+      const fineness = JSON.parse(finenessString);
+      setFineness(fineness);
+    }
+
+    const paymentString = localStorage.getItem("payment");
+
+    if (paymentString != null) {
+      const payment = JSON.parse(paymentString);
+      setPayment(payment);
+    }
+  }, []);
 
   return (
     <div className="calculator">
